@@ -49,3 +49,4 @@ nnoremap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
+set guioptions-=L
