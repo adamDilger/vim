@@ -5,7 +5,8 @@ Plug 'scrooloose/nerdtree'
 call plug#end()
 
 "" General
-set relativenumber	" Show line numbers
+set number " Show line number on current line
+set relativenumber	" Show relative numbers
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
