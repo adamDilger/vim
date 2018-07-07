@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "" General
