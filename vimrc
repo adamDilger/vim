@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 "" General
@@ -24,8 +26,8 @@ set shiftwidth=2	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set softtabstop=2	" Number of spaces per Tab
-set foldmethod=indent
-set foldlevel=2
+"set foldmethod=indent
+"set foldlevel=2
  
 "" Advanced
 set ruler	" Show row and column ruler information
@@ -64,3 +66,6 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
+
+" ControlP
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
