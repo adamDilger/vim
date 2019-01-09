@@ -3,12 +3,17 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
+"Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 call plug#end()
+
+"" Leader
+let mapleader = " "
 
 "" General
 set number " Show line number on current line
@@ -38,10 +43,14 @@ set ruler	" Show row and column ruler information
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
+set listchars=tab:>-,trail:~
+set list
+
 "" My additions
 filetype on
 syntax on
 colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 set colorcolumn=90
 set hidden
@@ -61,6 +70,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <leader>> 10<C-W>>
+nnoremap <leader>< 10<C-W><
+nnoremap <leader>- 10<C-W>-
+nnoremap <leader>+ 10<C-W>+
 
 set splitbelow
 set splitright
@@ -77,4 +90,8 @@ if has("gui_running")
 endif
 
 " ControlP
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|build'
+"vimgrep
+set wildignore+=**/node_modules/**,git/**,**/build/**,**/semantic/**,**/android/**,**/ios/**
+" vim signify (gitgutter)
+let g:signify_realtime = 0
